@@ -59,3 +59,7 @@ Historias de usuario:
 Cumpla con las historias de usuario y supere todas las pruebas a continuación para completar este proyecto. Déle su propio estilo personal. ¡Feliz codificación!
 
 Nota: Al ejecutar las pruebas habrá una pequeña demora. Espere unos segundos para permitir que finalicen las pruebas. No actualice la página antes de que finalicen.
+
+## Proyecto Finalizado :))
+
+[![Captura-de-pantalla-55.png](https://i.postimg.cc/qRWxRdwX/Captura-de-pantalla-55.png)](https://postimg.cc/S27MT3wJ)
