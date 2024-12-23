@@ -9,7 +9,7 @@ const pokeWeight = document.querySelector('#weight');
 const pokeHeight = document.querySelector('#height');
 const spriteContainer = document.querySelector('#sprite-container');
 const typesContainer = document.querySelector('#types');
-const HP = document.querySelector('#hp');
+const hp = document.querySelector('#hp');
 const attack = document.querySelector('#attack');
 const defense = document.querySelector('#defense');
 const specialAttack = document.querySelector('#special-attack');
@@ -23,12 +23,13 @@ async function getPokemon(evt) {
         const response = await fetch(pokeAllURL);
         const responseResults = await response.json();
         const { results } = responseResults;
-        const value = searchInput.value.trim();
+        const value = searchInput.value.toLowerCase().trim();
         findPokemonId(results, value);
     } catch (error) {
         console.log(error.message);
+        errorFetch();
     }
-}
+};
 
 const findPokemonId = (pokemon, value) => {
     const index = pokemon.find(
@@ -45,8 +46,7 @@ const findPokemonId = (pokemon, value) => {
     )
         .then((res) => res.json())
         .then((pk) => {
-            cleanerImage();
-            cleanerTypes();
+            cleanerFetch();
 
             const {
                 name,
@@ -58,10 +58,7 @@ const findPokemonId = (pokemon, value) => {
                 types,
             } = pk;
 
-            const image = document.createElement('img');
-            image.id = 'sprite';
-            image.src = front_default;
-            spriteContainer.appendChild(image);
+            spriteContainer.innerHTML = `<img id="sprite" src="${front_default}">`;
 
             pokeName.textContent = name.toUpperCase();
             pokeID.textContent = `#${id}`;
@@ -74,28 +71,24 @@ const findPokemonId = (pokemon, value) => {
             });
 
             types.forEach((elmnt) => {
-                const span = document.createElement('span');
-                span.classList.add('type', `${elmnt.type.name}`);
-                span.textContent = `${elmnt.type.name}`;
-                typesContainer.appendChild(span);
+                typesContainer.innerHTML += `<span class="type ${elmnt.type.name}">${elmnt.type.name}</span>`;
             });
         })
         .catch((error) => {
-            console.log(error);
+            console.log(error.message);
+            errorFetch();
         });
 };
 
-const cleanerImage = () => {
-    while (spriteContainer.firstChild) {
-        spriteContainer.removeChild(spriteContainer.firstChild);
-    }
+const cleanerFetch = () => {
+    spriteContainer.innerHTML = '';
+    typesContainer.innerHTML = '';
 };
 
-const cleanerTypes = () => {
-    while (typesContainer.firstChild) {
-        typesContainer.removeChild(typesContainer.firstChild);
-    }
-}
+const errorFetch = () => {
+    const messageError = 'Ha ocurrido un error';
+    pokeName.innerHTML = `<span class="error">${messageError}</span>`;
+};
 
 //Eventos
 searchBtn.addEventListener('click', getPokemon);

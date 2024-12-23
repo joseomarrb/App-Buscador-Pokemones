@@ -96,15 +96,23 @@ label {
 }
 
 .name-and-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     height: 28px;
-    font-size: 1.1em;
+    font-size: 1.5em;
     text-transform: capitalize;
     margin-bottom: 5px;
 }
 
 .pokemon-sizes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     height: 22px;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
 }
 
 #sprite-container {
@@ -114,7 +122,7 @@ label {
     justify-content: center;
 }
 
-#sprite-container img{
+#sprite-container img {
     width: 180px;
 }
 
@@ -126,7 +134,7 @@ label {
     gap: 5px;
 }
 
-.type{
+.type {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,6 +191,11 @@ label {
 
 .ice {
     background-color: #66ccfe;
+}
+
+.error{
+    color:red;
+    font-weight:bolder;
 }
 
 table {
