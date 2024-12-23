@@ -1,29 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemón Search App</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="magicpattern">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pokemón Search App</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="magicpattern">
+        <h1>Pokemón Search App</h1>
 
-    <input type="text" id="search-input" required>
-    <button id="search-button"></button>
+        <main class="container">
+            <form action="" id="search-form">
+                <label for="search-input">Search for Pokemón Name or ID:</label>
+                <input type="text" id="search-input" required />
+                <button id="search-button">Search</button>
+            </form>
 
-    <div class="" id="pokemon-name"></div>
-    <div class="" id="pokemon-id"></div>
-    <div class="" id="weight"></div>
-    <div class="" id="height"></div>
-    <div class="" id="types"></div>
-    <div class="" id="hp"></div>
-    <div class="" id="attack"></div>
-    <div class="" id="defense"></div>
-    <div class="" id="special-attack"></div>
-    <div class="" id="special-defense"></div>
-    <div class="" id="speed"></div>
-    
+            <section class="top-section">
+                <div class="name-and-id">
+                    <span id="pokemon-name"></span>
+                    <span id="pokemon-id"></span>
+                </div>
 
-    <script src="script.js"></script>
-</body>
+                <div class="pokemon-sizes">
+                    <span id="weight"></span>
+                    <span id="height"></span>
+                </div>
+                
+                <div id="sprite-container" class="sprite-container"></div>
+                
+                <div class="" id="types"></div>
+            </section>
+
+            <section class="bottom-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>BASE</th>
+                            <th>STATS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="abilities">
+                        <tr>
+                            <td>HP</td>
+                            <td id="hp"></td>
+                        </tr>
+                        <tr>
+                            <td>ATTACK</td>
+                            <td id="attack"></td>
+                        </tr>
+                        <tr>
+                            <td>DEFENSE</td>
+                            <td id="defense"></td>
+                        </tr>
+                        <tr>
+                            <td>SPECIAL-ATTACK</td>
+                            <td id="special-attack"></td>
+                        </tr>
+                        <tr>
+                            <td>SPECIAL-DEFENSE</td>
+                            <td id="special-defense"></td>
+                        </tr>
+                        <tr>
+                            <td>SPEED</td>
+                            <td id="speed"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
 </html>

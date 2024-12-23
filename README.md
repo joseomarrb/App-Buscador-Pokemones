@@ -8,6 +8,12 @@ En este proyecto, crearás una aplicación que buscará Pokémon por nombre o ID
 
 Nota: Los primeros 13 pasos deben completarse dentro del archivo index.html.
 
+Utiliza el punto de conexión ***https://pokeapi-proxy.freecodecamp.rocks/api/pokemon*** para ver una lista de todos los nombres, números de identificación y URL válidos de Pokémon.
+
+Utiliza el punto de conexión ***https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/{name-or-id}*** para obtener datos de un Pokémon, donde ***{name-or-id}*** es el nombre o el número de identificación del Pokémon.
+
+Nota: Los nombres de los Pokémon deben estar en minúsculas, sin caracteres especiales y separados por guiones. Además, si el Pokémon tiene ♀ o ♂ como parte de su nombre, el formato es ***{name-f}*** o ***{name-m}***, respectivamente.
+
 Historias de usuario:
 
 1. Debe tener un elemento de entrada ***input***con un id de ***"search-input".***

@@ -1,4 +1,20 @@
-body{
+@import url('https://fonts.googleapis.com/css2?900&family=Poly:ital@0;1&display=swap');
+
+:root {
+    --poly: 'Poly', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #ffff99;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1000 1000'%3E%3Cg fill='%23ffd573'%3E%3Cpolygon points='1000 -50 0 -50 500 450'/%3E%3Cpolygon points='550 500 1050 1000 1050 0'/%3E%3Cpolygon points='-50 0 -50 1000 450 500'/%3E%3Cpolygon points='0 1050 1000 1050 500 550'/%3E%3C/g%3E%3Cg fill='%23ffaa4d'%3E%3Cpolygon points='1000 -133.3 0 -133.3 500 366.7'/%3E%3Cpolygon points='633.3 500 1133.3 1000 1133.3 0'/%3E%3Cpolygon points='-133.3 0 -133.3 1000 366.7 500'/%3E%3Cpolygon points='0 1133.3 1000 1133.3 500 633.3'/%3E%3C/g%3E%3Cg fill='%23ff8026'%3E%3Cpolygon points='1000 -216.7 0 -216.7 500 283.3'/%3E%3Cpolygon points='716.7 500 1216.7 1000 1216.7 0'/%3E%3Cpolygon points='-216.7 0 -216.7 1000 283.3 500'/%3E%3Cpolygon points='0 1216.7 1000 1216.7 500 716.7'/%3E%3C/g%3E%3Cg fill='%23F50'%3E%3Cpolygon points='1000 -300 0 -300 500 200'/%3E%3Cpolygon points='800 500 1300 1000 1300 0'/%3E%3Cpolygon points='-300 0 -300 1000 200 500'/%3E%3Cpolygon points='0 1300 1000 1300 500 800'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%23FE0' points='0 707.1 0 292.9 292.9 0 707.1 0 1000 292.9 1000 707.1 707.1 1000 292.9 1000'/%3E%3Cg fill='%23ffc800'%3E%3Cpolygon points='464.6 -242.5 -242.5 464.6 464.6 464.6'/%3E%3Cpolygon points='535.4 464.6 1242.5 464.6 535.4 -242.5'/%3E%3Cpolygon points='-242.5 535.4 464.6 1242.5 464.6 535.4'/%3E%3Cpolygon points='535.4 1242.5 1242.5 535.4 535.4 535.4'/%3E%3C/g%3E%3Cg fill='%23ffa200'%3E%3Cpolygon points='405.7 -301.4 -301.4 405.7 405.7 405.7'/%3E%3Cpolygon points='594.3 405.7 1301.4 405.7 594.3 -301.4'/%3E%3Cpolygon points='-301.4 594.3 405.7 1301.4 405.7 594.3'/%3E%3Cpolygon points='594.3 1301.4 1301.4 594.3 594.3 594.3'/%3E%3C/g%3E%3Cg fill='%23ff7b00'%3E%3Cpolygon points='346.8 -360.3 -360.3 346.8 346.8 346.8'/%3E%3Cpolygon points='653.2 346.8 1360.3 346.8 653.2 -360.3'/%3E%3Cpolygon points='-360.3 653.2 346.8 1360.3 346.8 653.2'/%3E%3Cpolygon points='653.2 1360.3 1360.3 653.2 653.2 653.2'/%3E%3C/g%3E%3Cg fill='%23F50'%3E%3Cpolygon points='287.9 -419.2 -419.2 287.9 287.9 287.9'/%3E%3Cpolygon points='712.1 287.9 1419.2 287.9 712.1 -419.2'/%3E%3Cpolygon points='-419.2 712.1 287.9 1419.2 287.9 712.1'/%3E%3Cpolygon points='712.1 1419.2 1419.2 712.1 712.1 712.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
@@ -8,5 +24,199 @@ body{
     width: 100%;
     overflow-x: hidden;
     height: 100vh;
+    margin: 60px 0;
 }
 
+h1 {
+    font-family: var(--poly);
+    font-size: 38px;
+    text-align: center;
+}
+
+.container {
+    width: 325px;
+    margin: 25px 0;
+    background-color: #f5f6f7;
+    border: 1px solid #f5f6f7;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 10px rgba(223, 220, 220, 0.75);
+    font-family: var(--poly);
+    padding: 20px;
+}
+
+#search-form {
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    gap: 10px;
+}
+
+#search-input {
+    height: 40px;
+    padding-left: 10px;
+    width: 200px;
+}
+
+#search-button {
+    font-weight: bold;
+    font-family: var(--poly);
+    font-size: 14px;
+    padding: 5px 25px;
+    border: none;
+    background-color: #f6f65a;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+label {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.top-section,
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 225px;
+}
+
+.top-section {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f1f7;
+}
+
+.output,
+#search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.name-and-id {
+    height: 28px;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.pokemon-sizes {
+    height: 22px;
+    font-size: 0.85rem;
+}
+
+#sprite-container {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sprite-container img{
+    width: 180px;
+}
+
+#types {
+    min-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--poly);
+    font-weight: bolder;
+    width: 66px;
+    padding: 5px;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: red;
+    text-transform: uppercase;
+}
+
+.electric {
+    background-color: #fecc33;
+}
+
+.flying {
+    background-color: #8899ff;
+}
+
+.bug {
+    background-color: #aabb23;
+}
+
+.poison {
+    background-color: #c68bb7;
+}
+
+.water {
+    background-color: #42a1ff;
+}
+
+.grass {
+    background-color: #78cc55;
+}
+
+.dark {
+    background-color: #b59682;
+}
+
+.ground {
+    background-color: #dfba52;
+}
+
+.rock {
+    background-color: #baaa66;
+}
+
+.normal {
+    background-color: #b7b7aa;
+}
+
+.ice {
+    background-color: #66ccfe;
+}
+
+table {
+    background-color: #f6f65a;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+tr {
+    border-bottom: 5px solid #f5f6f7;
+}
+
+th,
+td {
+    border-left: 5px solid #f5f6f7;
+}
+
+td,
+th {
+    padding: 8px;
+    text-align: center;
+    gap: 20px;
+}
+
+@media screen and (min-width: 550px) {
+    .container {
+        width: 450px;
+    }
+
+    #search-form,
+    .top-section,
+    .bottom-section {
+        width: 95%;
+    }
+}
